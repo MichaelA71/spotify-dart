@@ -37,7 +37,7 @@ class Search extends EndpointPaging {
       'playlists': (json) => PlaylistSimple.fromJson(json),
       'albums': (json) => AlbumSimple.fromJson(json),
       'artists': (json) => Artist.fromJson(json),
-      'tracks': (json) => Track.fromJson(json),
+      'items': (json) => Track.fromJson(json),
       'shows': (json) => Show.fromJson(json),
       'episodes': (json) => Episode.fromJson(json),
     });

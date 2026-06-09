@@ -40,7 +40,7 @@ class Artists extends EndpointPaging {
     final jsonString = await _api._get('$_path/$artistId/top-tracks?$query');
     final map = json.decode(jsonString);
 
-    final topTracks = map['tracks'] as Iterable<dynamic>;
+    final topTracks = map['items'] as Iterable<dynamic>;
     return topTracks.map((m) => Track.fromJson(m));
   }
 

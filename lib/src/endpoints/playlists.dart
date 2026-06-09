@@ -59,10 +59,10 @@ class Playlists extends EndpointPaging {
     final query = _buildQuery({'additional_types': 'track'});
     return _getPages(
       'v1/playlists/$playlistId/items?$query',
-      (json) => Track.fromJson(json['track']),
+      (json) => Track.fromJson(json['item']),
       null,
       null,
-      (json) => json['track'] != null,
+      (json) => json['item'] != null,
     );
   }
 
@@ -75,7 +75,7 @@ class Playlists extends EndpointPaging {
       (json) => PlaylistTrack.fromJson(json),
       null,
       null,
-      (json) => json['track'] != null,
+      (json) => json['item'] != null,
     );
   }
 

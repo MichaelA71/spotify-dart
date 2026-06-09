@@ -103,7 +103,7 @@ Future main() async {
     });
 
     group('me/top', () {
-      test('tracks', () async {
+      test('items', () async {
         final result = await spotify.me.topTracks().first();
         expect(result.items?.length, 2);
 

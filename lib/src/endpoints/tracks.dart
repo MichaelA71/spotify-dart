@@ -27,7 +27,7 @@ class Tracks extends EndpointBase {
   Future<Iterable<Track>> list(List<String> trackIds) async => _listWithIds(
         path: _path,
         ids: trackIds,
-        jsonKey: 'tracks',
+        jsonKey: 'items',
         fromJson: Track.fromJson,
       );
 
